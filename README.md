@@ -19,3 +19,6 @@ We saw that the sales pattern veer off fundamentally from normal conduct. A sing
 We consolidated the improved modelling power from feature selection with the error decrease of tree outfits. We arranged an XGBoost and Random Forest model with our target of limiting RMSPE (Root Mean Squared Percent Error).Models we have prepared:
 1. XGBoost
 2. Random Forest
+
+## Model Evaluation
+The metrics that we used for our analysis was the root-mean squared- percentage-error (RMSPE), where n is the number of days,yi is the sales of a store for a single day and ^yi is the resultant prediction.
