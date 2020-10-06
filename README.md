@@ -13,3 +13,9 @@ Machine learning models were used to analyse data and predict future sales or be
 6) Competition Since[X] & Promo2Since[X]: Both columns have a high percentage of missing values and they won't be accurate as indicators, so we have removed features.
 7) StateHoliday: Converting all 0(integer) to ”0”(String) because data in the StateHoliday is a mix of numerical and string values. Hence, for the sake of consistency,all values were converted to string.
 8) Label Encoding: we performed label encoding on the categorical features present in our dataset, including StateHoliday in train.csv, test.csv and also Store Type, Assortment in store.csv.
+
+## Model Selection: 
+We saw that the sales pattern veer off fundamentally from normal conduct. A single model would be hard to deal with the majority of the extraordinary cases these stores show. Thusly, we felt that techniques that outfit a substantial arrangement of models would be best arranged to make expectations in our condition. One methodology that applies is bagging, where subsets of the data are used to shape distinctive models that are then pooled together[3]. Another methodology is to develop various models dependent on differing subsets of the indicators, so all models are not centered on the most compelling indicators, yet can rather catch the subtleties of lesser predictors. Boosting is another technique where each model isn't entrusted with predicting a definitive answer, yet rather on adjusting the residual error of the past model[1]. These strategies structure the reason for a few of the model sorts we used, for example, Random Forests and Boosted Trees. 
+We consolidated the improved modelling power from feature selection with the error decrease of tree outfits. We arranged an XGBoost and Random Forest model with our target of limiting RMSPE (Root Mean Squared Percent Error).Models we have prepared:
+1. XGBoost
+2. Random Forest
