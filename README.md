@@ -23,6 +23,6 @@ where n is the number of days,yi is the sales of a store for a single day and ^y
 ## Conclusion
 Our boosting model with the most important features yielded the best result on both the validation and test set with 0.1191 and 0.1493 RMSPE respectively, and for flask web-app we have used XGBoost pre-trained model for deployment. Using this model, we are forecasting the sales for particular store based on different input parameter that user inputs for a particular day in future, sales is affected by various factor like public holiday, store type , promotion, day of week etc. and we have taken care of this factors while training the model. For particular store we are showing percentage change in sales as compared to last year date and also bar chart for the same.
 
-# Hosted app link
+# Hosted app
 # https://sales-prediction1.herokuapp.com/
 
