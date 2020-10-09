@@ -1,0 +1,86 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<section class="content-section">
+    			<form name="predictForm" method="POST" action="/predict" onsubmit="return validateForm()">
+    				 <div class="form-group">
+    				 		<div class="row">
+    				 	<div class="col-lg-6">
+    				 		<h1>Store</h1>
+						<h2>Sales Predictor</h2>
+    				 		<h1>
+							  {% if label %} {{ label }} {% endif %}
+							</h1>
+							  <br>
+							  <button class="btn btn-lg btn-primary" type="submit">
+							  	Predict
+							  </button>
+						</div>
+						<div class="col-lg-6">
+              <div class="row">
+							<div class="col-lg-6 mx-auto">
+							<br>
+				
+		<input type="date" id="month" name="Month" value="2019-04-15"
+				 class="btn btn-secondary btn-lg dropdown-toggle"aria-haspopup="true"
+					min="2019-03-01" max="2022-12-31">
+                <label for="month">Month</label><br>
+                <p><small>Month</small></p>
+
+						    <select name="Promo" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="promo" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						      <option>0</option>
+						      <option>1</option>
+						    </select>
+						    <label for="promo">Promo</label>
+						    <p><small>store running a Promo = 0/1 </small></p>
+
+						    <select name="StateH" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="state_holliday" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+							  <option>4</option>
+						    </select>
+						    <label for="state_holliday">State Holiday</label><br>
+                <p><small>1 = None | 2 = public holiday <br> 3 = Easter holiday | 4 = Christmas</small></p>
+
+                <select name="Assortment" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="assortment" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						      <option>1</option>
+						      <option>2</option>
+						      <option>3</option>
+						    </select>
+						    <label for="assortment">Assortment</label><br>
+                <p><small>1 = basic | 2 = extra | 3 = extended</small></p>
+						    <div class="input-group">
+								  <div class="input-group-prepend">
+								    <span class="input-group-text">Store #</span>
+								  </div>
+								  <input type="text" name="store" value="1" class="form-control" aria-label="With textarea">
+								</div>
+                <p><small>Please input integers between 1 - 1115</small></p>
+								</div>
+                <div class="col-lg-6 mx-auto">
+                  <br>
+                  <select name="SchoolH" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="school_holliday" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  						      <option>0</option>
+  						      <option>1</option>
+  						    </select>
+  						    <label for="school_holliday">School Holiday</label>
+                  <p><small>0 = None <br> 1 = school holiday</small></p>
+                  <select name="StoreType" class="btn btn-secondary btn-lg dropdown-toggle" type="button" id="store_type" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  						      <option>1</option>
+  						      <option>2</option>
+  						      <option>3</option>
+                    <option>4</option>
+  						    </select>
+  						    <label for="store_type">Store Type</label><br>
+                  <p><small>1 = a | 2 = b <br> 3 = c | 4 = d</small></p>
+                </div>
+						</div>
+          </div>
+  					</div>
+    			</div>
+    		</form>
+    	</div>
+    </div>
+</section>
+{% endblock %}

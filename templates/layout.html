@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Sales Predictions</title>
+
+    <!-- Bootstrap core CSS -->
+     <link href="{{ url_for('static', filename='vendor/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="{{ url_for('static', filename='vendor/font-awesome/css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ url_for('static', filename='vendor/simple-line-icons/css/simple-line-icons.css') }}" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename='css/landing-page.min.css') }}" rel="stylesheet">
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-light bg-light static-top">
+      <div class="container">
+        <div>
+        <!-- <img src="/static/img/logo.png" width="50"> &nbsp; &nbsp; -->
+        <img src="/static/img/ibmpos_blue.jpg" width="150">
+      </div>
+      </div>
+    </nav>
+
+    <!-- Masthead -->
+    <header class="masthead text-white text-left">
+
+      <div class="container">
+
+
+        {% block content %}
+        {% endblock %}
+
+
+      </div>
+
+
+      </div>
+    </header>
+
+    <!-- Icons Grid -->
+  
+    <!-- Bootstrap core JavaScript -->
+    <link href="{{ url_for('static', filename='vendor/bootstrap/js/popper.min.js') }}">
+    <link href="{{ url_for('static', filename='vendor/jquery/jquery.min.js') }}">
+    <link href="{{ url_for('static', filename='vendor/bootstrap/js/bootstrap.bundle.min.js') }}">
+    <script type="text/javascript">
+      function validateForm() {
+        var x = document.forms['predictForm']['store'].value;
+        if (x > 1115) {
+          alert("Please input integers between 1 - 1115.")
+          return false;
+        }
+      }
+    </script>
+  </body>
+</html>
